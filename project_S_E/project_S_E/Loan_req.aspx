@@ -6,9 +6,13 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="background-image: url('h1.png');">
     <form id="form1" runat="server">
     <div>
+                    <asp:Button ID="Home" runat="server" Text="HOME"
+                            OnClick="home_Click" ForeColor="#cc0066"  Width="170px" />
+                    <br />
+            <center><asp:Label ForeColor="Green" Font-Bold="true" Font-Size="Larger" Text="Request Your Loan" runat="server"  ID="Label2"></asp:Label></center>
     <table>
         <tr>
             <td>
@@ -42,6 +46,8 @@
         </tr>
     </table>
         <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+        <br />
+            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">sign out</asp:LinkButton>
     </div>
     </form>
 </body>

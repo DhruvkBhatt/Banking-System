@@ -96,7 +96,11 @@
   <ItemGroup>
     <Content Include="Admin\Add_account.aspx" />
     <Content Include="Admin\Admin.aspx" />
+    <Content Include="Admin\admin.png" />
     <Content Include="Admin\Debit_req.aspx" />
+    <Content Include="Admin\Transc.aspx" />
+    <Content Include="h1.png" />
+    <Content Include="Homeimg.jpg" />
     <Content Include="Ch_pwd.aspx" />
     <Content Include="Debit_req.aspx" />
     <Content Include="Home.aspx" />
@@ -107,7 +111,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="One_time_password.aspx" />
-    <Content Include="Admin\Web.config" />
+    <Content Include="Admin\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -148,6 +154,13 @@
     </Compile>
     <Compile Include="Admin\Debit_req.aspx.designer.cs">
       <DependentUpon>Debit_req.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Transc.aspx.cs">
+      <DependentUpon>Transc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Transc.aspx.designer.cs">
+      <DependentUpon>Transc.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ch_pwd.aspx.cs">
       <DependentUpon>Ch_pwd.aspx</DependentUpon>

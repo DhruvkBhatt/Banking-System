@@ -12,9 +12,15 @@ namespace project_S_E
 {
     public partial class Ch_pwd : System.Web.UI.Page
     {
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            FormsAuthentication.RedirectToLoginPage();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["my_account_no"] == null) { Response.Redirect("loginPage.aspx"); }
+            if (Session["my_account_no"] == null) { Response.Redirect("loginPage.aspx?ReturnUrl=Ch_pwd.aspx"); }
             // Session["my_account_no"] = 1234;
         }
 
@@ -58,6 +64,11 @@ namespace project_S_E
 
                 return false;
                 }
+        }
+
+        protected void home_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
         }
     }
 }

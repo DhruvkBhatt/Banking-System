@@ -6,10 +6,15 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="background-image: url('h1.png');">
     <form id="form1" runat="server">
         <div>
-            &nbsp;<asp:Label ID="bal" runat="server" Text="" ></asp:Label>
+    
+        <asp:Button ID="Home" runat="server" ForeColor="#cc0066" Height="35px" OnClick="home_Click" Text="HOME" Width="170px" />
+            <br />
+    <asp:Label ID="lb1" Text="Transfer" ForeColor="RoyalBlue" runat="server" Font-Bold="true" Font-Size="Larger"/>
+            &nbsp;<br />
+            <asp:Label ID="bal" runat="server" Text="" ></asp:Label>
             <table>
                 <tr>
                     <td>Account No:

@@ -11,14 +11,14 @@
         }
     </style>
     </head>
-<body>
+<body style="background-image: url('Homeimg.jpg');">
     <form id="form1" runat="server">
     <div>
         <table>
         <tr>
             <td colspan="2"class="auto-style1">
               
-                <asp:Label ForeColor="Red" Text="Entre your Account Details" runat="server" Font-Size="Larger"></asp:Label>
+                <center><asp:Label ForeColor="Red" Text="Entre your Account Details" runat="server" Font-Bold="true" Font-Size="Larger" style="font-size: x-large"></asp:Label></center>
 
             </td></tr>
             

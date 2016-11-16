@@ -6,10 +6,14 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="background-image: url('admin.png');">
     <form id="form1" runat="server">
     <div>
-    
+                        <asp:Button ID="Home" runat="server" Text="HOME"
+                            OnClick="home_Click" ForeColor="#cc0066" Width="170px" />
+                        <br />
+            <asp:Label ForeColor="Green" Text="Accounts" Font-Bold="true" Font-Size="Larger" runat="server" ID="Label3"></asp:Label>
+                        <br />
         <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="Account_no" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Height="50px" Width="125px">
             <AlternatingRowStyle BackColor="White" />
             <EditRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
@@ -59,6 +63,8 @@
                 <asp:Parameter Name="original_New_user" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
+    
+    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">sign out</asp:LinkButton>
     
     </div>
     </form>

@@ -6,10 +6,12 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="background-image: url('h1.png');">
     <form id="form1" runat="server">
         <div>
-            <asp:Label ForeColor="Green" Text="Change Your Passsword" runat="server" Font-Size="Larger"></asp:Label>
+            <asp:Button ID="Home" runat="server" Text="HOME"
+                            OnClick="home_Click" ForeColor="#cc0066" Width="170px" /><br />
+            <center><asp:Label ForeColor="Green" Text="Change Your Passsword" runat="server" Font-Bold="true" Font-Size="Larger"></asp:Label></center>
             <table>
                 <tr>
                     <td>Old password</td>
@@ -70,6 +72,7 @@
                 <tr>
                     <td colspan="2">
                         <asp:ValidationSummary ID="ValidationSummary1" ForeColor="Red" runat="server" />
+                        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">sign out</asp:LinkButton>
                     </td>
                 </tr>
             </table>

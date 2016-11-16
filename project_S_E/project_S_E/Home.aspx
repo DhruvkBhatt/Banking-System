@@ -6,18 +6,21 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="background-image: url('h1.png');">
     <form id="form1" runat="server">
     <div>
-    <asp:Label ForeColor="Green" Text="Welcome To Home" runat="server" Font-Size="Larger"></asp:Label>
+    <center><asp:Label ForeColor="Green" Text="Welcome To Home" Font-Bold="true" Font-Size="Larger" runat="server"></asp:Label></center>
         <br />
         <asp:Button ID="Button1" runat="server" Text="Statement" ForeColor="Red" OnClick="Button1_Click" />
         <asp:Button ID="Button2" runat="server" Text="Change_password" ForeColor="Red" OnClick="Button2_Click" />
         <asp:Button ID="Button3" runat="server" Text="Your_detail" ForeColor="Red" OnClick="Button3_Click" />
         <asp:Button ID="Button4" runat="server" Text="Loan_req" ForeColor="Red" OnClick="Button4_Click" />
         <asp:Button ID="Button5" runat="server" Text="Change_Detail" ForeColor="Red" OnClick="Button5_Click" />
-        <asp:Button ID="Button6" runat="server" Text="Transaction" ForeColor="Red" OnClick="Button6_Click" />
+        <asp:Button ID="Button6" runat="server" Text="Transfer" ForeColor="Red" OnClick="Button6_Click" />
+        <asp:Button ID="Button7" runat="server" Text="Debit_req" ForeColor="Red" OnClick="Button7_Click" />
         <br />
+    
+            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">sign out</asp:LinkButton>
     
         <br />
     

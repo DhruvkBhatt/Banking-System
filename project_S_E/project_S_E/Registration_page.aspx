@@ -6,12 +6,15 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="background-image: url('h1.png');">
     <form id="form1" runat="server">
     <div>
     
-        Update Your Details<br />
-        <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="User_id" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Height="50px" Width="125px">
+        <asp:Button ID="Home" runat="server" ForeColor="#cc0066" Height="35px" OnClick="home_Click" Text="HOME" Width="170px" />
+        <br />
+    
+<asp:Label Text="Update Your Details" ID="lb1" runat="server" ForeColor="Green" Font-Bold="true" Font-Size="Larger" />
+               <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="User_id" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Height="50px" Width="125px">
             <AlternatingRowStyle BackColor="White" />
             <EditRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
             <Fields>
@@ -77,6 +80,9 @@
                 <asp:Parameter Name="original_Ph_no" Type="Decimal" />
             </UpdateParameters>
         </asp:SqlDataSource>
+    
+        <br />
+            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">sign out</asp:LinkButton>
     
     </div>
     </form>

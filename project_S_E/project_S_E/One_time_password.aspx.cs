@@ -8,13 +8,20 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
+using System.Web.Security;
 namespace project_S_E.Registration
 {
     public partial class One_time_password : System.Web.UI.Page
     {
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            FormsAuthentication.RedirectToLoginPage();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["my_account_no"] == null) { Response.Redirect("loginPage.aspx"); }
+            if (Session["my_account_no"] == null) { Response.Redirect("loginPage.aspx?ReturnUrl=One_time_password.aspx"); }
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)

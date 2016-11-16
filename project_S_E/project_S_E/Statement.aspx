@@ -6,14 +6,20 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="background-image: url('h1.png');">
     <form id="form1" runat="server">
     <div>
-    <asp:Label ID="lb1" Text="Amount that send from your account" ForeColor="RoyalBlue" runat="server"/>
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" DataSourceID="SqlDataSourceSender" GridLines="None">
+    
+        <asp:Button ID="Home" runat="server" ForeColor="#cc0066" Height="35px" OnClick="home_Click" Text="HOME" Width="170px" />
+        <br />
+    <asp:Label ID="lb1" Text="Amount that send from your account" ForeColor="RoyalBlue" runat="server" Font-Bold="true" Font-Size="Larger"/>
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" DataSourceID="SqlDataSourceSender" GridLines="None" AutoGenerateColumns="False">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:CommandField ShowSelectButton="True" />
+                <asp:BoundField DataField="Date Time" HeaderText="Date Time" SortExpression="Date Time" />
+                <asp:BoundField DataField="Send To" HeaderText="Send To" SortExpression="Send To" />
+                <asp:BoundField DataField="Amount" HeaderText="Amount" SortExpression="Amount" />
             </Columns>
             <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
@@ -35,7 +41,7 @@
                 <asp:SessionParameter Name="Sender_account_no" SessionField="my_account_no" Type="String" />
             </SelectParameters>
       </asp:SqlDataSource>
-        <asp:Label ID="lb2" Text="Amount that recieve from  your account" ForeColor="RoyalBlue" runat="server"/>
+        <asp:Label ID="lb2" Font-Bold="true" Font-Size="Larger" Text="Amount that recieve from  your account" ForeColor="RoyalBlue" runat="server"/>
         <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" DataSourceID="SqlDataSourceSender0" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
@@ -61,6 +67,8 @@
                 <asp:SessionParameter Name="Sender_account_no" SessionField="my_account_no" Type="String" />
             </SelectParameters>
       </asp:SqlDataSource>
+
+            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">sign out</asp:LinkButton>
 
         <br />
     

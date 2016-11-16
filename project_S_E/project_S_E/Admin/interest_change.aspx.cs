@@ -13,11 +13,20 @@ namespace project_S_E
 {
     public partial class interest_change : System.Web.UI.Page
     {
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            FormsAuthentication.RedirectToLoginPage();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["my_account_no"] == null) { Response.Redirect("../loginPage.aspx"); }
+            if (Session["my_account_no"] == null) { Response.Redirect("../loginPage.aspx?ReturnUrl=Admin/interest_change.aspx"); }
         }
 
-       
+        protected void home_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin.aspx");
+        }
     }
 }

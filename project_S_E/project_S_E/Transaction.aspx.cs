@@ -15,7 +15,7 @@ namespace project_S_E
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["my_account_no"] == null) { Response.Redirect("loginPage.aspx"); }
+            if (Session["my_account_no"] == null) { Response.Redirect("loginPage.aspx?ReturnUrl=Transaction.aspx"); }
             // Session["my_account_no"] = 1234;
             if (!IsPostBack)
             {
@@ -30,6 +30,7 @@ namespace project_S_E
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
             FormsAuthentication.SignOut();
+            Session.Abandon();
             FormsAuthentication.RedirectToLoginPage();
         }
         private void getvalue1()
@@ -179,6 +180,11 @@ namespace project_S_E
         private void str()
         {
 
+        }
+
+        protected void home_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
         }
     }
 }

@@ -13,9 +13,15 @@ namespace project_S_E
 {
     public partial class Statement : System.Web.UI.Page
     {
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            FormsAuthentication.RedirectToLoginPage();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["my_account_no"] == null) { Response.Redirect("loginPage.aspx"); }
+            if (Session["my_account_no"] == null) { Response.Redirect("loginPage.aspx?ReturnUrl=Statement.aspx"); }
             // Session["my_account_no"] = 1234;
             //     string cs = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
             //    using (SqlConnection con = new SqlConnection(cs))
@@ -42,6 +48,11 @@ namespace project_S_E
 
             //        }
             //    }
+        }
+
+        protected void home_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
         }
     }
 }

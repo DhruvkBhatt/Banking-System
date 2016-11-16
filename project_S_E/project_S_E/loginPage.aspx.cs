@@ -14,7 +14,7 @@ namespace project_S_E
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["my_account_no"] = txtAccno.Text;
         }
         private bool AuthenticateUser(string username, string password)
         {
@@ -27,10 +27,10 @@ namespace project_S_E
 
                 con.Open();
                 SqlDataReader rdr = cmd.ExecuteReader();
-
+                Session["my_account_no"] = txtAccno.Text;
                 if (rdr.Read())
                 {
-                    Session["my_account_no"] = txtAccno.Text;
+                    
                     if (DropDownList1.SelectedItem.ToString().Equals("saving")) {
                         Session["account_type_no"] = 's';
                     }
@@ -43,10 +43,11 @@ namespace project_S_E
                         Session["account_type_no"] = 's';
                     }
                     
-                    if ((int)rdr["new_user"] == 1)
+                    if ((int)rdr["New_user"] == 1)
                     {
 
-                        Response.Redirect("One_time_password.aspx");
+                      // Response.Redirect("One_time_password.aspx");
+                       // return true;
                     }
 
                     return true;
@@ -55,6 +56,7 @@ namespace project_S_E
                 {
                     return false;
                 }
+                con.Close();
             }
         }
 
@@ -69,11 +71,11 @@ namespace project_S_E
 
                 if (AuthenticateUser(txtAccno.Text, txtPWD.Text))
                 {
-                    if (string.Compare(txtAccno.Text, "admin")==0)
+                    if (string.Compare(txtAccno.Text, "admin1")==0)
                     {
-                        Response.Redirect("Admin/Admin.aspx");
+                       // Response.Redirect("~/Admin/Admin.aspx");
                     }
-                    FormsAuthentication.RedirectFromLoginPage(txtAccno.Text, chkBoxRememberMe.Checked);
+                    FormsAuthentication.RedirectFromLoginPage(txtAccno.Text,chkBoxRememberMe.Checked);
                 }
                 else
                 {

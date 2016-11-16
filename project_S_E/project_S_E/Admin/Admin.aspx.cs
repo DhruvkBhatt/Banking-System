@@ -7,15 +7,22 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-using System.Web.Security;
 
+using System.Web.Security;
 namespace project_S_E
 {
     public partial class Admin_page : System.Web.UI.Page
     {
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            
+            FormsAuthentication.SignOut(); Session.Abandon();
+            FormsAuthentication.RedirectToLoginPage();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["my_account_no"] == null) { Response.Redirect("../loginPage.aspx"); }
+            
+            if (Session["my_account_no"] == null) { Response.Redirect("../loginPage.aspx?ReturnUrl="+"Admin/Admin.aspx"); }
             Label1.Text = "";
         }
 
@@ -116,6 +123,10 @@ namespace project_S_E
         protected void btndeb_Click(object sender, EventArgs e)
         {
             Response.Redirect("Debit_req.aspx");
+        }
+        protected void btntra_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Transc.aspx");
         }
     }
     }
