@@ -106,6 +106,7 @@
     <Content Include="Home.aspx" />
     <Content Include="Admin\interest_change.aspx" />
     <Content Include="Loan_req.aspx" />
+    <Content Include="Loan_req_status.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -196,6 +197,13 @@
     </Compile>
     <Compile Include="Loan_req.aspx.designer.cs">
       <DependentUpon>Loan_req.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Loan_req_status.aspx.cs">
+      <DependentUpon>Loan_req_status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loan_req_status.aspx.designer.cs">
+      <DependentUpon>Loan_req_status.aspx</DependentUpon>
     </Compile>
     <Compile Include="loginPage.aspx.cs">
       <DependentUpon>loginPage.aspx</DependentUpon>

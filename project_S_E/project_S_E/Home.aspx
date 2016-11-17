@@ -18,6 +18,7 @@
         <asp:Button ID="Button5" runat="server" Text="Change_Detail" ForeColor="Red" OnClick="Button5_Click" />
         <asp:Button ID="Button6" runat="server" Text="Transfer" ForeColor="Red" OnClick="Button6_Click" />
         <asp:Button ID="Button7" runat="server" Text="Debit_req" ForeColor="Red" OnClick="Button7_Click" />
+        <asp:Button ID="Button8" runat="server" Text="Loan_req_status" ForeColor="Red" OnClick="loan_req_Click" />
         <br />
     
             <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">sign out</asp:LinkButton>

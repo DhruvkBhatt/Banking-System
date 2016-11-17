@@ -46,7 +46,7 @@ namespace project_S_E
                     if ((int)rdr["New_user"] == 1)
                     {
 
-                      // Response.Redirect("One_time_password.aspx");
+                       Response.Redirect("One_time_password.aspx");
                        // return true;
                     }
 

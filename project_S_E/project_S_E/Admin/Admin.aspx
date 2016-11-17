@@ -27,7 +27,7 @@
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"  Visible="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" AllowPaging="True" AllowSorting="True" DataKeyNames="Loan_id" DataSourceID="SqlDataSource1">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+                <asp:CommandField ShowEditButton="True" ShowSelectButton="True" />
                 <asp:BoundField DataField="Account_no" HeaderText="Account_no" ReadOnly="True" SortExpression="Account_no" />
                 <asp:BoundField DataField="Req_date" HeaderText="Req_date" ReadOnly="True" SortExpression="Req_date" />
                 <asp:BoundField DataField="Loan_Reason" HeaderText="Loan_Reason" ReadOnly="True" SortExpression="Loan_Reason" />

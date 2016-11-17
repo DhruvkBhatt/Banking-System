@@ -58,5 +58,10 @@ namespace project_S_E
         {
             Response.Redirect("Debit_req.aspx");
         }
+
+        protected void loan_req_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Loan_req_status.aspx");
+        }
     }
 }
